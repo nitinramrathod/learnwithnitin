@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:wght@200&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -29,17 +31,116 @@ body {
     display: block;
     width: 100%;
 }
-.landingSwiper .landingSwipper-pagination{
+
+.landingSwiper .landingSwipper-pagination {
     padding: 40px 0;
     text-align: center;
 }
-.landingSwiper .landingSwipper-pagination .swiper-pagination-bullet{
+
+.landingSwiper .landingSwipper-pagination .swiper-pagination-bullet {
     height: 10px;
     width: 30px;
     border-radius: 5px;
     background: rgb(44, 181, 183);
     transition: all .3s ease;
 }
-.landingSwiper .landingSwipper-pagination .swiper-pagination-bullet-active{
+
+.landingSwiper .landingSwipper-pagination .swiper-pagination-bullet-active {
     width: 50px
+}
+
+/* Landing section   */
+.landing {
+
+    min-height: 100vh;
+    width: 100%;
+    padding-bottom: 50px;
+    background: #1B2430;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.landing-main {
+    height: 100vh;
+    position: relative;
+    perspective: 800px;
+
+}
+
+.glass-back,
+.glass-front {
+    max-width: 460px;
+    max-height: 230px;
+    background: linear-gradient(45deg, rgba(94, 148, 255, 0.29), rgba(71, 78, 209, 0.118));
+    position: absolute;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.glass-back h2,
+.glass-front h2 {
+    color: green;
+    font-size: 30px;
+    /* font-family: 'Bebas Neue', cursive; */
+    font-family: 'Source Code Pro', monospace;
+
+}
+
+
+.glass-front {
+    background-attachment: fixed;
+    font-weight: 700;
+    padding: 50px 20px;
+    backdrop-filter: blur(10px);
+    top: 112px;
+    left: 0;
+    box-shadow: 0 0 20px 10px #03275d27;
+    animation: landingGlass 5s ease infinite;
+    transform-origin: left;
+
+    /* transform: translateZ(100px);     */
+    /* transform-style: preserve-3d; */
+    /* perspective: 100px; */
+}
+
+.glass-back {
+    padding-top: 80px;
+    top: 290px;
+    right: 50px;
+    animation: landingGlassBack 10s linear infinite;
+    transform: translateZ(-20px);
+
+    /* transform-style: preserve-3d; */
+    transform-origin: left;
+
+}
+
+@keyframes landingGlass {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(40px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+@keyframes landingGlassBack {
+    0% {
+        transform: translateY(10px);
+    }
+    
+    50% {
+        transform: translateY(-20px);
+    }
+    
+    100% {
+        transform: translateY(10px);
+    }
 }
