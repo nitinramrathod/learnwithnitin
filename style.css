@@ -14,13 +14,196 @@ body {
     padding: 0;
 }
 
+
+
+/* Landing section start  */
+.landing {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: #0C191A;
+
+}
+
+.glass-background {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(25px);
+    min-height: 100vh;
+    height: auto;
+    z-index: 2;
+}
+.glass-background .banner-section{
+    min-height: 100vh;
+}
+
+.circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(139.18deg, rgba(69, 221, 231, 0.34) 15.98%, rgba(203, 206, 35, 0.34) 91.55%);
+}
+
+.circle1 {
+
+    animation: circle2 10s ease infinite;
+    bottom: 127px;
+    left: 108px;
+    width: 300px;
+    height: 300px;
+    filter: blur(155px) saturate(4);
+    background: linear-gradient(139.18deg, rgb(0 239 255) 15.98%, rgb(203 206 35 / 52%) 91.55%);
+}
+
+.circle2 {
+    top: 161px;
+    right: 161px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(139.18deg, #45DDE7 15.98%, #4bfac4 91.55%);
+    animation: circle1 6s ease infinite;
+    filter: blur(150px) saturate(74);
+
+}
+
+.circle3 {
+    animation: circle 8s ease infinite;
+    bottom: 62px;
+    right: 341px;
+    width: 200px;
+    height: 200px;
+    filter: blur(159px) saturate(7);
+    background: linear-gradient(139.18deg, #19A9B2 15.98%, #ff388c 91.55%);
+
+
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-300px, -100px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes circle1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-200px, 100px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes circle2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translateY(-250px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.glass-background .container {
+    height: auto;
+}
+
+/* header section start */
+
+.container header {
+    height: 150px;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+header nav {
+    width: 41%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+
+/* header section end */
+
+
+.landing .landing-main {
+    padding-top: 120px;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.landing .landing-text {}
+
+.landing .landing-main h1 {
+    color: #eee;
+    font-family: arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 106px;
+}
+
+.landing .landing-main h2 {
+    font-size: 80px;
+    color: #eee;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+
+/* slider section start  */
 .swiper {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
+.landingSwiper .swiper-slide-active{
+
+}
+
 .swiper-slide {
+    /* transition: all .5s ease; */
     background-position: center;
     background-size: cover;
     width: 300px;
@@ -32,115 +215,17 @@ body {
     width: 100%;
 }
 
-.landingSwiper .landingSwipper-pagination {
-    padding: 40px 0;
-    text-align: center;
-}
-
-.landingSwiper .landingSwipper-pagination .swiper-pagination-bullet {
-    height: 10px;
-    width: 30px;
-    border-radius: 5px;
-    background: rgb(44, 181, 183);
-    transition: all .3s ease;
-}
-
-.landingSwiper .landingSwipper-pagination .swiper-pagination-bullet-active {
-    width: 50px
-}
-
-/* Landing section   */
-.landing {
-
+/* slider section end  */
+.glass-background .testimonial-section{
     min-height: 100vh;
-    width: 100%;
-    padding-bottom: 50px;
-    background: #1B2430;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.landing-main {
-    height: 100vh;
-    position: relative;
-    perspective: 800px;
-
-}
-
-.glass-back,
-.glass-front {
-    max-width: 460px;
-    max-height: 230px;
-    background: linear-gradient(45deg, rgba(94, 148, 255, 0.29), rgba(71, 78, 209, 0.118));
-    position: absolute;
+.glass-background .container .testimonial-blur{
+    border: 2px solid rgba(224, 224, 224, 0.118);
+    padding: 10px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.149), rgba(189, 186, 186, 0.261), rgba(0, 0, 0, 0.124));
+    box-shadow: 2px 2px 20px -8px #ffffff2e;
+    backdrop-filter: blur(171px)saturate(64.5)brightness(112.5);
     border-radius: 20px;
-    text-align: center;
-    padding: 20px;
-}
 
-.glass-back h2,
-.glass-front h2 {
-    color: green;
-    font-size: 30px;
-    /* font-family: 'Bebas Neue', cursive; */
-    font-family: 'Source Code Pro', monospace;
-
-}
-
-
-.glass-front {
-    background-attachment: fixed;
-    font-weight: 700;
-    padding: 50px 20px;
-    backdrop-filter: blur(10px);
-    top: 112px;
-    left: 0;
-    box-shadow: 0 0 20px 10px #03275d27;
-    animation: landingGlass 5s ease infinite;
-    transform-origin: left;
-
-    /* transform: translateZ(100px);     */
-    /* transform-style: preserve-3d; */
-    /* perspective: 100px; */
-}
-
-.glass-back {
-    padding-top: 80px;
-    top: 290px;
-    right: 50px;
-    animation: landingGlassBack 10s linear infinite;
-    transform: translateZ(-20px);
-
-    /* transform-style: preserve-3d; */
-    transform-origin: left;
-
-}
-
-@keyframes landingGlass {
-    0% {
-        transform: translateX(0px);
-    }
-
-    50% {
-        transform: translateX(40px);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
-}
-@keyframes landingGlassBack {
-    0% {
-        transform: translateY(10px);
-    }
-    
-    50% {
-        transform: translateY(-20px);
-    }
-    
-    100% {
-        transform: translateY(10px);
-    }
 }
