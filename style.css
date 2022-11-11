@@ -17,7 +17,7 @@ body {
 
 
 /* Landing section start  */
-.landing {
+.main-container {
     position: relative;
     min-height: 100vh;
     width: 100%;
@@ -139,7 +139,7 @@ body {
 header .logo h2 {
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 48px;
     color: #FFFFFF;
 }
@@ -163,7 +163,7 @@ header nav a {
 /* header section end */
 
 
-.landing .landing-main {
+.main-container .landing-main {
     padding-top: 120px;
     width: 100%;
     z-index: 2;
@@ -171,9 +171,7 @@ header nav a {
     align-items: center;
 }
 
-.landing .landing-text {}
-
-.landing .landing-main h1 {
+.main-container .landing-main h1 {
     color: #eee;
     font-family: arial;
     font-style: normal;
@@ -182,7 +180,7 @@ header nav a {
     line-height: 106px;
 }
 
-.landing .landing-main h2 {
+.main-container .landing-main h2 {
     font-size: 80px;
     color: #eee;
     font-weight: 700;
