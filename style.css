@@ -20,6 +20,7 @@ body {
 .main-container {
     position: relative;
     min-height: 100vh;
+    min-width: 1200px;
     width: 100%;
     background: #0C191A;
 
@@ -32,9 +33,6 @@ body {
     min-height: 100vh;
     height: auto;
     z-index: 2;
-}
-.glass-background .banner-section{
-    min-height: 100vh;
 }
 
 .circle {
@@ -121,9 +119,7 @@ body {
     }
 }
 
-.glass-background .container {
-    height: auto;
-}
+
 
 /* header section start */
 
@@ -165,6 +161,7 @@ header nav a {
 
 .main-container .landing-main {
     padding-top: 120px;
+    padding-bottom: 230px;
     width: 100%;
     z-index: 2;
     display: flex;
@@ -196,10 +193,6 @@ header nav a {
     padding-bottom: 50px;
 }
 
-.landingSwiper .swiper-slide-active{
-
-}
-
 .swiper-slide {
     /* transition: all .5s ease; */
     background-position: center;
@@ -215,12 +208,12 @@ header nav a {
 
 /* slider section end  */
 .glass-background .testimonial-section{
-    min-height: 100vh;
+    padding: 50px 0;
 }
 
 .glass-background .container .testimonial-blur{
+    width: auto;
     border: 2px solid rgba(224, 224, 224, 0.118);
-    padding: 10px;
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.149), rgba(189, 186, 186, 0.261), rgba(0, 0, 0, 0.124));
     box-shadow: 2px 2px 20px -8px #ffffff2e;
     backdrop-filter: blur(171px)saturate(64.5)brightness(112.5);
