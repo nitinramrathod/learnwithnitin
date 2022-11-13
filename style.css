@@ -430,9 +430,9 @@ header nav a:hover:after{
     border-radius: 20px;
     margin-top: 100px;
     margin-bottom: 20px;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.291), rgba(255, 255, 255, 0.168), rgba(0, 0, 0, 0.25));
+    background: linear-gradient(45deg, rgba(95, 240, 213, 0.348), rgba(255, 255, 255, 0.085), rgba(0, 0, 0, 0.175));
     backdrop-filter: blur(100px)brightness(50)saturate(50);
-    border: 2px solid rgba(255, 255, 255, 0.153);
+    border: .5px solid rgba(255, 255, 255, 0.153);
 
 
 }
@@ -447,7 +447,7 @@ header nav a:hover:after{
     display: grid;
     place-items: center;
     border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.153);
+    border: 1px solid rgba(255, 255, 255, 0.153);
 }
 
 .video-secreen iframe {
@@ -460,7 +460,7 @@ header nav a:hover:after{
     width: 100%;
     height: 80vh;
     border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.153);
+    border: 1px solid rgba(255, 255, 255, 0.153);
     min-height: 500px;
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.291), rgba(255, 255, 255, 0.168), rgba(0, 0, 0, 0.25));
     backdrop-filter: blur(100);
