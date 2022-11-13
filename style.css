@@ -44,7 +44,7 @@ body {
 
 .circle1 {
 
-    animation: circle2 10s ease infinite;
+    animation: circle2 8s ease infinite;
     bottom: 127px;
     left: 108px;
     width: 300px;
@@ -59,13 +59,23 @@ body {
     width: 200px;
     height: 200px;
     background: linear-gradient(139.18deg, #45DDE7 15.98%, #4bfac4 91.55%);
-    animation: circle1 6s ease infinite;
+    animation: circle1 14s ease infinite;
+    filter: blur(150px) saturate(74);
+
+}
+.circle4 {
+    top: 161px;
+    right: 550px;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(139.18deg, #58c2b947 15.98%, rgb(129 186 230 / 80%) 91.55%);
+    animation: circle1 11s ease infinite;
     filter: blur(150px) saturate(74);
 
 }
 
 .circle3 {
-    animation: circle 8s ease infinite;
+    animation: circle 10s ease infinite;
     bottom: 62px;
     right: 341px;
     width: 200px;
@@ -75,6 +85,16 @@ body {
 
 
 }
+.circle5 {
+    top: 301px;
+    left: 100px;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(139.18deg, #15c9ed33 15.98%, rgb(126 192 254 / 80%) 91.55%);
+    animation: circle5 15s ease infinite;
+    filter: blur(150px) saturate(74);
+
+}
 
 @keyframes circle {
     0% {
@@ -82,7 +102,7 @@ body {
     }
 
     50% {
-        transform: translate(-300px, -100px);
+        transform: translate(40%, -1700%);
     }
 
     100% {
@@ -96,7 +116,7 @@ body {
     }
 
     50% {
-        transform: translate(-200px, 100px);
+        transform: translateY(1000%);
     }
 
     100% {
@@ -110,7 +130,20 @@ body {
     }
 
     50% {
-        transform: translateY(-250px);
+        transform: translateY(-1500%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes circle5 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(100%, -100%);
     }
 
     100% {
@@ -259,13 +292,14 @@ header nav a {
     transition: all 3s linear;
 }
 .card-text{
-    padding: 5px 20px;
+    padding: 5px 10px;
     overflow: hidden;
 
 }
 .card-text a{
-    font-size: 18px;
+    font-size: 17px;
     color: #19A9B2;
+    line-height: 10px;
     text-decoration: none;
 }
 .card-text a:hover{
@@ -273,7 +307,7 @@ header nav a {
 }
 
 .card-text p{
-    
+    padding-top: 5px;
     font-size: 14px;
     color: #3d3d3d;
 }
