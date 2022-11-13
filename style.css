@@ -182,18 +182,40 @@ header .logo h2 {
 }
 
 header nav {
-    width: 41%;
+    width: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
-header nav a {
+header nav a{    
     text-decoration: none;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 3px;
+    transform: all .3s ease;
+}
+header nav a:hover{
+    color: #FFFFFF;
+}
+header nav a::after{
+    transition: all 2s ease;
+    bottom: 0;
+    left: -100%;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ffffffa5;  
+}
+header nav a:hover:after{
+    left: 100%;
 }
 
 
@@ -216,7 +238,71 @@ header nav a {
     font-weight: 700;
     font-size: 88px;
     line-height: 106px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2px;
 }
+.main-container .landing-main h1::after {
+    transition: all 1s ease;
+    bottom: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: rgba(241, 241, 241, 0.507);
+    /* border-radius: 50%; */
+    animation: protonity 5s ease infinite;
+}
+/* .main-container .landing-main h1:hover:after{
+    left: 100%;
+
+} */
+@keyframes protonity {
+    0%{ left: -100%}
+    20%{ 
+        left: -70%;
+        background: rgba(255, 255, 255, 0.913);    
+    }
+    30%{ 
+        left: -80%;
+        background: rgba(167, 181, 172, 0.242);
+    }
+    40%{ 
+        left: -65%;
+        background: rgba(147, 150, 239, 0.575);
+    }
+    50%{ 
+        left: -70%;
+        background: rgba(115, 207, 192, 0.507);
+    }
+    60%{ 
+        left: -50%;
+        background: rgba(117, 167, 134, 0.507);
+    }
+    65%{ 
+        left: -55%;
+        background: rgba(161, 206, 114, 0.507);
+    }
+    70%{ 
+        left: -20%;
+        background: rgba(111, 163, 202, 0.507);
+    }
+    75%{ 
+        left: -30%;
+        background: rgba(38, 182, 185, 0.507);
+    }
+    80%{ 
+        left: -10%;
+        background: rgba(103, 238, 215, 0.749);
+    }
+    100%{ 
+        left: 0;
+        background: rgba(101, 221, 143, 0.507);
+    }
+    
+}
+
 
 .main-container .landing-main h2 {
     font-size: 80px;
@@ -258,16 +344,34 @@ header nav a {
     width: 250px;
     height: 300px;
     overflow: hidden;
-    background: linear-gradient(45deg, #ecececd1, #fffffff7, #2f7a77);
-    padding: 10px;
+    background: linear-gradient(45deg,#616161a1, #20999424);
+    padding: 3px;
     border-radius: 20px;
     backdrop-filter: blur(200);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.757);
     transition: all .5s ease;
+    filter: blur(10);
+   
+    
+}
+.swiper-slide-active .card-box{
+    background-image: linear-gradient(45deg, #ecececd1, #fffffff7, #2f7a77);
+  
+}
+.swiper-slide-active .card-box .card-text p{
+    color:  #3d3d3d;
+  
 }
 .swiper-slide .card-box:hover{
+
+    background-image: linear-gradient(45deg, #ecececd1, #fffffff7, #2f7a77);
     scale: 1.05;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.837);
+}
+.swiper-slide .card-box:hover .card-text p{
+
+    color: #3d3d3d;
+
 }
 .swiper-slide .card-box:hover .card-img img{
 
@@ -309,7 +413,7 @@ header nav a {
 .card-text p{
     padding-top: 5px;
     font-size: 14px;
-    color: #3d3d3d;
+    color: #5fff6a;
 }
 /* slider section end  */
 
