@@ -173,7 +173,7 @@ header {
     
 }
 header .logo{
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -319,6 +319,18 @@ header nav a:hover:after{
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
+}
+
+.landing-side{
+    height: 100%;
+    /* display: grid;
+    place-items: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.landing-side-card .landing-side{
+
 }
 
 
