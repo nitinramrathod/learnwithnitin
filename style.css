@@ -172,6 +172,15 @@ header {
     align-items: center;
     
 }
+header .logo{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .logo .brand{
+    height: 70px;
+}
 
 header .logo h2 {
     font-style: normal;
