@@ -323,15 +323,37 @@ header nav a:hover:after{
 
 .landing-side{
     height: 100%;
-    /* display: grid;
-    place-items: center; */
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
-.landing-side-card .landing-side{
+.landing-side .round{
+    position: absolute;
+    transform-origin: center;
+}
+.landing-side .inner{
+    /* margin-top: 44px;; */
+    /* margin-left: 1px; */
+    animation: round 15s linear infinite;
+}
+.landing-side .outer{
+    /* padding-top: 10px;
+    padding-left: 10px; */
+    animation: round 25s linear infinite reverse;
 
 }
+
+@keyframes round {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
 
 
 /* slider section start  */
