@@ -180,6 +180,11 @@
                 <!-- testimonial section start  -->
                 <section class="testimonial-section">
                     <div class="container">
+                        <div class="row">
+                            <h2 class="heading text-center">
+                                Best Of Video Courses...
+                            </h2>
+                        </div>
                         <div class="swiper landingSwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -297,6 +302,49 @@
                     </div>
                 </section>
                 <!-- testimonial section end  -->
+
+                <section class="members">
+                    <div class="container">
+                        <div class="row">
+                            <h2 class="heading text-center">
+                                Our Team Members...
+                            </h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="memeber-photo-col">
+    
+                                    <div class="photo-box">
+                                        <img class="one" src="/images/one.png" alt="Protonity Fantastic Five">
+                                        <img class="two" src="/images/box1.png" alt="Protonity Fantastic Five">
+                                        <img class="three" src="/images/box2.png" alt="Protonity Fantastic Five">
+                                        <img class="for" src="/images/box3.png" alt="Protonity Fantastic Five">
+                                        <img class="five" src="/images/box4.png" alt="Protonity Fantastic Five">
+                                        <img class="six" src="/images/box5.png" alt="Protonity Fantastic Five">
+                                        <img class="seven" src="/images/box6.png" alt="Protonity Fantastic Five">
+                                        <img class="eight" src="/images/box7.png" alt="Protonity Fantastic Five">
+                                        <img class="nine" src="/images/nine.png" alt="Protonity Fantastic Five">
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="member-info-box">
+                                    <h2>About Protonity Members.</h2>
+                                    <p>
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita temporibus ipsum quia vitae repudiandae similique quibusdam non ad, dolore blanditiis.
+                                    </p>
+                                    <p>
+                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita temporibus ipsum quia vitae repudiandae similique quibusdam non ad, dolore blanditiis.
+                                    </p>
+                                </div>
+    
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </section>
 
                 <article class="study-container">
 
@@ -491,12 +539,23 @@
             loop: true,
             centeredSlides: true,
             spaceBetween: -10,
-            slidesPerView: "4",
+            slidesPerView: "2",
             speed: 1000,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
             },
+            breakpoints: {
+        // when window width is <= 499px
+        768: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 30
+        },
+        992: {
+            slidesPerView: 4,
+            spaceBetweenSlides: 40
+        }
+    }
 
         });
     </script>
