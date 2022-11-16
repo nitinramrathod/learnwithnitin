@@ -387,6 +387,8 @@ header nav a:hover:after{
     height: 300px;
     padding: 10px;
     transition: all 1s ease;
+    display: flex;
+    justify-content: center;
 }
 .swiper-slide-active{
     scale: 1.1;
@@ -480,11 +482,16 @@ header nav a:hover:after{
     place-items: center;
 }
 .heading{
-    color: rgb(83, 244, 198);
-    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    border-bottom:  2px solid rgba(255, 255, 255, 0.211);
     letter-spacing: 1px;
-    font-size: 50px;
-    padding-bottom: 70px;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.memeber-photo-col {
+    margin: 30px 0;
+
 }
 .photo-box{
     width: 300px;
@@ -530,22 +537,22 @@ header nav a:hover:after{
     z-index: 2;
 }
 .photo-box:hover .two{
-    transform: translate(90px, -137px);
+    transform: translate(90px, -118px);
 }
 .photo-box:hover .three{
-    transform: translate(307px, -38px);
+    transform: translate(245px, -38px);
 }
 .photo-box:hover .for{
-    transform: translate(-124px, -15px);
+    transform: translate(-58px, -15px);
 }
 .photo-box:hover .five{
     transform: translate(90px, 70px)scale(1.5)rotate(360deg);
 }
 .photo-box:hover .six{
-    transform:  translate(302px, 153px);
+    transform:  translate(245px, 153px);
 }
 .photo-box:hover .seven{
-    transform: translate(-123px, 190px)
+    transform: translate(-58px, 190px)
 }
 .photo-box:hover .eight{
     transform: translate(90px, 265px);
@@ -555,6 +562,7 @@ header nav a:hover:after{
 }
 
 .member-info-box{
+    margin-top: 30px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -567,12 +575,12 @@ header nav a:hover:after{
 }
 p{
     color: rgb(183, 183, 183);
-    font-size: 18px;
+    font-size: 16px;
 }
 h2{
     color: rgb(255, 255, 255);
     padding-bottom: 10px;
-    font-size: 40px;
+    font-size: 24px;
 }
 
 /* @keyframes member {
@@ -608,7 +616,7 @@ h2{
     border-radius: 10px;
     border-bottom-left-radius: 40px;
     border-top-left-radius: 40px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 20px;
     background: linear-gradient(45deg, rgba(95, 240, 213, 0.348), rgba(255, 255, 255, 0.085), rgba(0, 0, 0, 0.175));
     backdrop-filter: blur(100px)brightness(50)saturate(50);
@@ -621,12 +629,15 @@ h2{
     width: 100%;
     padding: 20px;
     min-height: 288px;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.291), rgba(255, 255, 255, 0.168), rgba(0, 0, 0, 0.25));
+    background: linear-gradient(45deg, rgba(95, 240, 213, 0.348), rgba(255, 255, 255, 0.085), rgba(0, 0, 0, 0.175));
+    /* background: linear-gradient(90deg, rgba(18, 57, 62, 0.915), rgba(0, 0, 0, 0.25)); */
     backdrop-filter: blur(100px)brightness(50)saturate(50);
     display: grid;
     place-items: center;
-    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.153);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: none;
 }
 
 .video-secreen iframe {
@@ -638,10 +649,15 @@ h2{
 .video-list {
     width: 100%;
     height: 60vh;
-    border-radius: 10px;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.153);
     min-height: 350px;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.291), rgba(255, 255, 255, 0.168), rgba(0, 0, 0, 0.25));
+    background: red;
+    background: linear-gradient(90deg, rgba(148, 148, 148, 0.364), rgba(124, 124, 124, 0.356));
+    
+    /* background: linear-gradient(45deg, rgba(0, 0, 0, 0.291), rgba(255, 255, 255, 0.168), rgba(0, 0, 0, 0.25)); */
     backdrop-filter: blur(100);
 }
 

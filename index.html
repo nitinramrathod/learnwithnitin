@@ -180,7 +180,7 @@
                 <!-- testimonial section start  -->
                 <section class="testimonial-section">
                     <div class="container">
-                        <div class="row">
+                        <div class="row text-center">
                             <h2 class="heading text-center">
                                 Best Of Video Courses...
                             </h2>
@@ -379,7 +379,7 @@
 
                     <!-- C++ Language Section  -->
                     <div class="container" id="cppLanguage">
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col">
                                 <h2 class="course-heading">C++ Language Best Of Video Courses</h2>
 
@@ -539,19 +539,22 @@
             loop: true,
             centeredSlides: true,
             spaceBetween: -10,
-            slidesPerView: "2",
+            slidesPerView: "1",
             speed: 1000,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
             },
             breakpoints: {
-        // when window width is <= 499px
         768: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetweenSlides: 30
         },
         992: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 40
+        },
+        1200: {
             slidesPerView: 4,
             spaceBetweenSlides: 40
         }
