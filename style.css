@@ -179,8 +179,8 @@ header {
     align-items: center;
     
 }
-header .logo{
-
+.logo{
+    scale: .7;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,6 +236,27 @@ header nav a:hover:after{
     left: 100%;
 }
 
+.dropdown-menu{
+    background: rgba(60, 147, 138, 0.437);
+}
+.nav-item{
+    margin: 10px 0;
+}
+.dropdown-item{    
+    color: white;
+}
+.dropdown-item:hover{
+    color: black;
+}
+.navbar-toggler{
+    border: none;
+}
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+    color: red;
+}
 
 /* header section end */
 
@@ -562,6 +583,7 @@ header nav a:hover:after{
 }
 
 .member-info-box{
+    margin: 30px;
     margin-top: 30px;
     border-radius: 10px;
     display: flex;
@@ -572,6 +594,7 @@ header nav a:hover:after{
     padding: 20px;
     background: rgba(77, 255, 193, 0.096);
     backdrop-filter: blur(20);
+    position: relative;
 }
 p{
     color: rgb(183, 183, 183);
@@ -583,7 +606,32 @@ h2{
     font-size: 24px;
 }
 
-/* @keyframes member {
+.member-info-box .anim{
+    z-index: 2;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+}
+.anim-box1{
+
+    background: rgba(214, 71, 161, 0.4);
+    top: -40px;
+    left: -20px;
+    animation: anim 3s ease .5s infinite ;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.anim-box2{
+    background: rgba(99, 236, 179, 0.698);
+    bottom: -20px;
+    right: -20px;
+    animation: anim 3s ease infinite;
+}
+
+
+
+@keyframes anim {
     0%{
         transform: translateY(0);
     }
@@ -594,7 +642,7 @@ h2{
         transform: translateY(0);
     }
     
-} */
+}
 
 
 
@@ -617,6 +665,7 @@ h2{
     border-bottom-left-radius: 40px;
     border-top-left-radius: 40px;
     margin-top: 50px;
+    text-align: left;
     margin-bottom: 20px;
     background: linear-gradient(45deg, rgba(95, 240, 213, 0.348), rgba(255, 255, 255, 0.085), rgba(0, 0, 0, 0.175));
     backdrop-filter: blur(100px)brightness(50)saturate(50);
@@ -1232,23 +1281,8 @@ p{
     font-size: 18px;
 }
 h2{
-    color: rgb(255, 255, 255);
-    padding-bottom: 10px;
-    font-size: 40px;
+    font-size: 38px;
 }
-
-/* @keyframes member {
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(20px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-    
-} */
 
 
 
