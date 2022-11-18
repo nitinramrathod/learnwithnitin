@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Distressed&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +11,7 @@
 body {
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    /* font-family: 'Bebas Neue', cursive; */
     font-size: 14px;
     color: #000;
     margin: 0;
@@ -174,77 +175,47 @@ main {
     z-index: 2;
 
 }
-
-header {
-    height: 80px;
-    width: 100%;
-    z-index: 5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+.navbar{
+    min-height: 80px;
+}
+.navbar  .nav-link:hover{
+    color: #19A9B2 !important;
 }
 
-.logo {
-    scale: .7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-header .logo .brand {
-    height: 70px;
-}
-
-header .logo h2 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 48px;
-    color: #FFFFFF;
-}
-
-header nav {
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-
-    display: none;
-}
-
-header nav a {
+.navbar .nav-link {
     text-decoration: none;
-    font-weight: 700;
+    font-weight:600;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     display: block;
     position: relative;
+    margin: 0 10px;
     overflow: hidden;
     padding-bottom: 3px;
     transform: all .3s ease;
 }
 
-header nav a:hover {
-    color: #FFFFFF;
+.navbar .nav-link:hover {
+    color: #48e8f3 !important;
 }
 
-header nav a::after {
-    transition: all 2s ease;
+.navbar .nav-link::after {
+    transition: all .5s ease;
     bottom: 0;
-    left: -100%;
+    left: -110%;
     content: "";
     position: absolute;
     width: 100%;
     height: 2px;
-    background: #ffffffa5;
+    background: #48e8f3 !important;
 }
 
-header nav a:hover:after {
-    left: 100%;
+.navbar .nav-link:hover:after {
+    left: 0;
 }
+
 
 .dropdown-menu {
     background: rgba(60, 147, 138, 0.437);
@@ -549,11 +520,12 @@ header nav a:hover:after {
 
 .heading {
     color: rgb(255, 255, 255);
-    font-weight: 700;
+    font-weight: 200;
     border-bottom: 2px solid rgba(255, 255, 255, 0.211);
     letter-spacing: 1px;
     font-size: 30px;
     margin-bottom: 40px;
+    font-family: 'Rubik Distressed', cursive;
 }
 
 .memeber-photo-col {
@@ -737,6 +709,39 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* scroll end */
+/* latest section start  */
+.latest{
+    min-height: 500px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.245);
+    padding-bottom: 50px;
+}
+.latest-content{
+    margin: 20px;
+    height: 500px;
+    background-color: rgb(242, 242, 242);
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+.latest-content::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0.068);
+    border-radius: 10px;
+}
+
+.latest-content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.latest-content::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgb(25, 96, 103);
+    cursor: pointer;
+}
+
+
+
+/* latest section end  */
 
 
 
@@ -874,6 +879,11 @@ footer p {
     height: 100%;
     padding-left: 10px;
 }
+
+
+
+
+
 
 
 
@@ -1378,10 +1388,10 @@ footer p {
 
     .heading {
         color: rgba(255, 255, 255, 0.663);
-        font-weight: 700;
         letter-spacing: 1px;
         font-size: 50px;
-        padding-bottom: 70px;
+        padding: 30px 0;
+        margin-bottom: 70px;
     }
 
     .photo-box {
