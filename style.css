@@ -842,9 +842,6 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     
 }
-.video-list .lists:last-child{
-    /* padding-bottom: 10px; */
-}
 .lists img{
     padding-right: 10px;
     cursor: pointer;
