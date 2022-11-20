@@ -801,7 +801,7 @@ body::-webkit-scrollbar-thumb {
 .video-list {
     width: 100%;
     min-height: 350px;
-    max-height: 700px;
+    max-height: 450px;
     border-top: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
