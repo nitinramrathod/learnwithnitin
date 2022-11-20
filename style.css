@@ -808,9 +808,61 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid rgba(255, 255, 255, 0.153);
     background: red;
     background: linear-gradient(90deg, rgba(148, 148, 148, 0.364), rgba(124, 124, 124, 0.356));
-
+    overflow-y: scroll;
     /* background: linear-gradient(45deg, rgba(0, 0, 0, 0.291), rgba(255, 255, 255, 0.168), rgba(0, 0, 0, 0.25)); */
     backdrop-filter: blur(100);
+}
+
+/* scroll bar  */
+.video-list::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgba(0, 0, 0, 0.068);
+    border-radius: 10px;
+}
+
+.video-list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.video-list::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgb(25, 96, 103);
+    cursor: pointer;
+}
+/* scroll bar  */
+
+.video-list .lists{
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    padding: 10px 15px;
+    border-bottom: 2px solid rgba(23, 73, 68, 0.655);
+    
+    
+    align-items: center;
+    
+}
+.video-list .lists:last-child{
+    /* padding-bottom: 10px; */
+}
+.lists img{
+    padding-right: 10px;
+    cursor: pointer;
+    transition: all .5s ease;
+
+}
+.lists p{
+    color: white;
+    transition: all .5s ease;
+}
+.lists:hover img{
+    scale: 1.05;
+
+}
+.lists:hover p{
+    color: #45DDE7;
+
+
 }
 
 /* footer section */
@@ -945,7 +997,9 @@ footer p {
     }
 
     .video-list{
+        overflow-y: scroll;
         min-height: 500px;
+        max-height: 500px;
         height: auto;
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.153);
