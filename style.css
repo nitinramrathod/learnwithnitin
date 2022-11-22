@@ -779,23 +779,21 @@ body::-webkit-scrollbar-thumb {
 
 .video-secreen {
     width: 100%;
-    padding: 20px;
     min-height: 288px;
     background: linear-gradient(45deg, rgba(95, 240, 213, 0.348), rgba(255, 255, 255, 0.085), rgba(0, 0, 0, 0.175));
-    /* background: linear-gradient(90deg, rgba(18, 57, 62, 0.915), rgba(0, 0, 0, 0.25)); */
     backdrop-filter: blur(100px)brightness(50)saturate(50);
     display: grid;
     place-items: center;
     border: 1px solid rgba(255, 255, 255, 0.153);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
     border-bottom: none;
 }
 
 .video-secreen iframe {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    box-shadow: 0px 7px 12px black;
 }
 
 .video-list {
@@ -806,11 +804,10 @@ body::-webkit-scrollbar-thumb {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.153);
-    background: red;
     background: linear-gradient(90deg, rgba(148, 148, 148, 0.364), rgba(124, 124, 124, 0.356));
     overflow-y: scroll;
     /* background: linear-gradient(45deg, rgba(0, 0, 0, 0.291), rgba(255, 255, 255, 0.168), rgba(0, 0, 0, 0.25)); */
-    backdrop-filter: blur(100);
+    backdrop-filter: blur(100px);
 }
 
 /* scroll bar  */
@@ -861,6 +858,42 @@ body::-webkit-scrollbar-thumb {
 
 
 }
+
+/* other course screen start  */
+.other-course-screen{
+
+    margin: 50px 0;
+    width: 100%;
+    backdrop-filter: blur(100px)brightness(50)saturate(50);
+    background: linear-gradient(45deg, rgb(255 255 255 / 12%), rgba(0, 0, 0, 0.652));
+    border: 1px solid rgba(255, 255, 255, 0.153);
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+.other-video-secreen{
+    width: 100%;
+    
+    
+}
+.other-course-screen .other-video-secreen iframe{
+    width: 100%;
+    height: 250px;
+
+
+}
+.other-course-headline{
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+
+/* other course screen end */
+
+
+
+
+
 
 /* footer section */
 footer {
@@ -986,7 +1019,7 @@ footer p {
 
     .video-secreen{
         min-height: 500px;
-        padding: 40px;
+        padding: 15px;
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.153);
 
@@ -1001,6 +1034,20 @@ footer p {
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.153);
         
+
+    }
+    .video-secreen {
+        box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.753);
+
+    }
+    
+    .video-secreen iframe {
+        box-shadow: none;
+        border-radius: 10px;
+       
+    }
+    .other-course-screen{
+        width: 50%;
 
     }
 
