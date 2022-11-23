@@ -569,6 +569,18 @@ main {
 /* show task here  */
 .show-task{
     gap: 10px;
+    background: rgba(228, 228, 228, 0.641);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all .5s ease;
+    
+}
+.show-task:hover{
+
+    background: rgba(228, 228, 228, 0.933);
+    scale: 1.02;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 .show-task p{
     flex: 5;
@@ -579,7 +591,7 @@ main {
 .show-task span{
     flex: 1;
     font-weight: 600;
-    color: rgb(80, 222, 153);
+    color: rgb(11, 121, 199);
     font-size: 18px;
     position: relative;
     z-index: 4;
