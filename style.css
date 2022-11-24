@@ -1,8 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Distressed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@1,300&family=Rubik+Distressed&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@1,300&family=Rubik+Distressed&family=Secular+One&display=swap');
 
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@1,300&family=Rubik+Distressed&family=Secular+One&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Josefin+Sans:ital,wght@1,300&family=Rubik+Distressed&family=Secular+One&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -554,6 +553,17 @@ main {
 }
 #add-task i:hover{
     color: rgb(93, 199, 93);
+    scale: 1.03;
+    
+}
+#save-task i{
+    color: #a8def6;
+    margin-top: 7px;
+    
+}
+#save-task i:hover{
+    color: #2ebdff;
+    scale: 1.03;
     
 }
 #delete-all i{
@@ -563,8 +573,9 @@ main {
 }
 #delete-all i:hover{
     color: rgb(204, 35, 35);
-    
+    scale: 1.03;
 }
+
 
 /* show task here  */
 .show-task{
@@ -583,7 +594,7 @@ main {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 .show-task p{
-    flex: 5;
+    flex: 7;
     color: rgb(47, 47, 47);
     font-size: 18px;
     text-shadow: 0 0 2px rgba(0, 0, 255, 0.074);
@@ -613,6 +624,22 @@ main {
 }
 .show-task button{
     flex: 1;
+    transition: all .3s ease;
+}
+.show-task .update{
+    color: rgb(227, 37, 227);
+}
+.show-task .update:hover{
+    color: rgb(132, 43, 196);
+}
+
+.show-task .delete{
+    color: rgb(243 92 52);
+    
+}
+.show-task .delete:hover{
+    color: rgb(204, 35, 35)
+    
 }
 
 
@@ -660,19 +687,20 @@ main {
 }
 
 .one {
+    transform-style: preserve-3d;
     transform: translate(28px, -34px);
 }
 
 .two {
-    transform: translate(90px, -50px);
+    transform: translate(97px, -50px);
 }
 
 .three {
-    transform: translate(210px, -2px);
+    transform: translate(218px, -2px);
 }
 
 .for {
-    transform: translate(-28px, 27px);
+    transform: translate(-20px, 33px);
 }
 
 .five {
@@ -702,15 +730,15 @@ main {
 }
 
 .photo-box:hover .two {
-    transform: translate(90px, -118px);
+    transform: translate(98px, -118px);
 }
 
 .photo-box:hover .three {
-    transform: translate(245px, -38px);
+    transform: translate(215px, -118px);
 }
 
 .photo-box:hover .for {
-    transform: translate(-58px, -15px);
+    transform: translate(-21px, -117px);
 }
 
 .photo-box:hover .five {
@@ -718,15 +746,18 @@ main {
 }
 
 .photo-box:hover .six {
-    transform: translate(245px, 153px);
+    transform: translate(411px, -205px);
+    scale: .4;
 }
 
 .photo-box:hover .seven {
-    transform: translate(-58px, 190px)
+    transform: translate(-181px, -204px);
+    scale: 0.4;
 }
 
 .photo-box:hover .eight {
-    transform: translate(90px, 265px);
+    transform: translate(120px, -201px);
+    scale: .4;
 }
 
 .photo-box:hover .nine {
@@ -748,15 +779,19 @@ main {
     position: relative;
 }
 
-p {
+.member-info-box  p {
     color: rgb(183, 183, 183);
-    font-size: 16px;
+    font-size: 20px;
+    font-family: 'Caveat', cursive;
+
 }
 
-h2 {
+.member-info-box  h2 {
     color: rgb(255, 255, 255);
     padding-bottom: 10px;
-    font-size: 24px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Caveat', cursive;
 }
 
 .member-info-box .anim {
