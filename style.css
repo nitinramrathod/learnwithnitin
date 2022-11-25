@@ -646,6 +646,47 @@ main {
 
 /* todo list ends here  */
 
+/* parallax effect start */
+.glass-background{
+    perspective: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.parallax-section{
+    height: 90vh;
+    width: 100%;  
+    background: url('/images/parallax/first.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    place-content: center;
+}
+.parallax-section div{
+    padding: 20px;
+    text-align: center;
+
+}
+.parallax-section .welcome-heading{
+    font-size: 45px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(0, 55, 119);
+    padding-bottom: 20px;
+    color: rgb(255, 255, 255);
+   
+}
+.parallax-section .welcome-text{
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.655);
+    text-shadow: 0 0 10px rgb(214, 214, 214);
+
+
+}
+/* parallax effect end */
+
 
 /* member section start  */
 .memeber-photo-col {
