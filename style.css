@@ -656,9 +656,10 @@ main {
 .parallax-section{
     height: 90vh;
     width: 100%;  
-    background: url('/images/parallax/first.jpg');
+    background: url('/images/parallax/back2.webp');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     display: grid;
     place-content: center;
