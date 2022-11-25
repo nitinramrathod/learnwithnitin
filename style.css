@@ -652,9 +652,8 @@ main {
     overflow-y: auto;
     overflow-x: hidden;
 }
-
 .parallax-section{
-    height: 90vh;
+    height: 100vh;
     width: 100%;  
     background: url('/images/parallax/back2.webp');
     background-repeat: no-repeat;
@@ -664,6 +663,18 @@ main {
     display: grid;
     place-content: center;
 }
+
+.parallax-two{
+    background: url('/images/parallax/back1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.parallax-three{
+    background: url('/images/parallax/back3.png');
+}
+
 .parallax-section div{
     padding: 20px;
     text-align: center;
@@ -671,7 +682,7 @@ main {
 }
 .parallax-section .welcome-heading{
     font-size: 45px;
-    font-weight: 700;
+    font-weight: 800;
     color: transparent;
     -webkit-text-stroke: 1px rgb(0, 55, 119);
     padding-bottom: 20px;
@@ -681,15 +692,42 @@ main {
 .parallax-section .welcome-text{
     font-size: 18px;
     font-weight: 700;
-    color: rgba(0, 0, 0, 0.655);
-    text-shadow: 0 0 10px rgb(214, 214, 214);
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.518);
 
 
 }
+
+/* animation parallax start */
+.parallax-anim1{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-00.webp');}
+.parallax-anim2{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-01.webp');}
+.parallax-anim3{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-02.webp');}
+.parallax-anim4{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-03.webp');}
+.parallax-anim5{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-04.webp');}
+.parallax-anim6{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-05.webp');}
+.parallax-anim7{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-06.webp');}
+.parallax-anim8{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-07.webp');}
+.parallax-anim9{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-08.webp');}
+
+.parallax-section{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* animation parallax start */
+
+
+
+
+
 /* parallax effect end */
 
 
 /* member section start  */
+.members{
+    padding-bottom: 30px;
+}
 .memeber-photo-col {
     min-height: 400px;
     width: 100%;
@@ -1072,6 +1110,7 @@ body::-webkit-scrollbar-thumb {
 .other-course-headline{
     padding: 10px 20px;
     font-size: 18px;
+    color: white;
 }
 
 
