@@ -12,6 +12,15 @@ var cssFile = 'courses/javascript.json';
 var jquery = document.getElementById('jquery-courses');
 var jqueryFile = 'courses/javascript.json';
 
+let cursor = document.getElementById('pointer');
+
+
+// mouse pointer 
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
+})
+
 
 
 
