@@ -54,8 +54,8 @@
                                             <a class="nav-link" aria-current="page" href="index.html">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" aria-current="page" href="#"><i
-                                                    class="fa-light fa fab fa-laptop-mobile"></i>All Courses</a>
+                                            <a class="nav-link active-page" aria-current="page" href="#"><i
+                                                    class="fa-light fa fab fa-laptop-mobile "></i>All Courses</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="index.html#latest">Latest Update</a>
@@ -100,62 +100,57 @@
                         </div>
                         <div class="detail-course-container" id="javascript-courses">
 
-                            <div class="other-course-box detail-course-box">
-                                <div class=" col-12">
-                                    <div class="other-video-secreen">
-
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KGkiIBTq0y0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h2 class="other-course-headline">JavaScript Language Best Of Video Courses</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="other-course-box detail-course-box">
-                                <div class=" col-12">
-                                    <div class="other-video-secreen">
-
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KGkiIBTq0y0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h2 class="other-course-headline">JavaScript Language Best Of Video Courses</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="other-course-box detail-course-box">
-                                <div class=" col-12">
-                                    <div class="other-video-secreen">
-
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KGkiIBTq0y0"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h2 class="other-course-headline">JavaScript Language Best Of Video Courses</h2>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- data populating by javascript -->
 
                         </div>
+                    </div>
+                </section>
+                
+                 <!-- HTML Courses videos -->
+                <section class="detail-courses">
+                    <div class="container">
+                        <div class="row">
+                            <h2 class="heading">
+                                HTML all best courses
+                            </h2>
+                        </div>
+                        <div class="detail-course-container" id="html-courses">
 
+                            <!-- data populating by javascript -->
 
+                        </div>
+                    </div>
+                </section>
 
+                <!-- CSS Courses videos -->
+                <section class="detail-courses">
+                    <div class="container">
+                        <div class="row">
+                            <h2 class="heading">
+                                CSS all best courses
+                            </h2>
+                        </div>
+                        <div class="detail-course-container" id="css-courses">
+
+                            <!-- data populating by javascript -->
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- JQuery Courses videos -->
+                <section class="detail-courses">
+                    <div class="container">
+                        <div class="row">
+                            <h2 class="heading">
+                                JQuery all best courses
+                            </h2>
+                        </div>
+                        <div class="detail-course-container" id="jquery-courses">
+
+                            <!-- data populating by javascript -->
+
+                        </div>
                     </div>
                 </section>
 
@@ -231,54 +226,8 @@
         crossorigin="anonymous"></script>
 
 
-    <!-- <script src="main.js"></script> -->
-    <script>
-        // all courses script here API json fetching.
-        
-        var javascript = document.getElementById('javascript-courses');
-        let http = new XMLHttpRequest();
-        http.open('get', 'courses/javascript.json', true);
-        http.send();
-        
-        
-        http.onload = function () {
-            
-            if (this.readyState == 4 && this.status == 200) {
-                
-                let courseData = JSON.parse(this.responseText);
-                let output = '';
-                
-                for (let item of courseData) {
-                    output += `                    
-                    <div class="other-course-box detail-course-box">
-                                <div class=" col-12">
-                                    <div class="other-video-secreen">
-
-                                        <iframe width="560" height="315" src="${item.iframe}"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h2 class="other-course-headline">${item.title}</h2>
-                                    </div>
-                                </div>
-                            </div>                 
-                        `;
-                    }
-
-                    console.log(output);
-                    
-                    javascript.innerHTML = output;
-                    // alert("hello");
-
-
-            }
-        }
-    </script>
+    <script src="courses.js"></script>
+    
 </body>
 
 </html>

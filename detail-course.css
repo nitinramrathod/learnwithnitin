@@ -3,6 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+.other-course-box{
+    margin: 20px 0;
+
+}
+.heading{
+    padding: 15px 10px;
+    margin-top: 60px;
+    margin-bottom: 17px;
+
+}
+.active-page{
+    color: aqua !important;
+}
+
 .detail-courses{
     min-height: 100vh;
     width: 100%;
@@ -15,10 +29,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-}
-.other-course-box{
-   
-    /* max-height: 300; */
 }
 .detail-course-box{
     width: 340px;
