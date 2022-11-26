@@ -9,6 +9,17 @@ var saveTaskBtn = document.getElementById("save-task");
 var taskListBox = document.getElementById("show-task-box");
 let saveIndex = document.getElementById('index');
 let deleteAll = document.getElementById('delete-all');
+let cursor = document.getElementById('pointer');
+
+
+// mouse pointer 
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
+})
+
+
+
 
 courseList.addEventListener('click', function (e) {
     var item = e.target.getAttribute('data-src');
@@ -18,6 +29,7 @@ courseList.addEventListener('click', function (e) {
 
 
 });
+
 
 
 // todo task function

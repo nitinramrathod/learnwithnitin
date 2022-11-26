@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    cursor: none;
 }
 
 
@@ -17,13 +18,23 @@ body {
     color: #000;
     margin: 0;
     padding: 0;
+    /* cursor: none; */
 }
+
 
 main {
     overflow: hidden;
+    
 }
 
+#pointer{
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    scale: .7;
 
+}
 
 
 /* Landing section start  */
