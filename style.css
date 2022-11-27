@@ -5,7 +5,8 @@
 * {
     margin: 0;
     padding: 0;
-    cursor: none;
+    /* cursor: none;
+    pointer-events: none; */
 }
 
 
@@ -28,12 +29,151 @@ main {
 }
 
 #pointer{
-    pointer-events: none;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    scale: .7;
+    /* pointer-events: none; */
+    position: fixed;
+    /* transform: translate(-50%, -50%); */
+    z-index: 999;
+    left: 10px;
+    top: 85px;
+    scale: 1;
+    transform-origin: center;
+    animation: smily 2.4s ease infinite;
 
+}
+
+.face{
+    width: 70px;
+    height: 70px;
+    background: yellow;
+    background: linear-gradient(rgb(255, 255, 104), rgb(185, 155, 6));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.face:hover .mouth{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-radius: 3px;
+    height: 5px;
+    animation: mouth 3s ease infinite;
+
+}
+@keyframes mouth {
+    0%{
+        border-radius: 0;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+        height: 5px;
+    }
+    50%{
+        border-radius: 0;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+        height: 12px;
+    }
+    100%{
+        border-radius: 0;
+       border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+        height: 5px;
+    }
+    
+}
+
+
+
+
+.face:hover{
+
+    background: rgb(240, 45, 45);
+    background: linear-gradient(rgb(255, 66, 66), rgb(143, 10, 10));
+
+}
+
+.eyes{
+    margin-top: 16px;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.eye{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: white;
+    position: relative;
+  
+
+
+}
+.eye::before{
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    background: rgb(26, 26, 26);
+    border-radius: 50%;
+    
+    margin: 4px;
+
+}
+.mouth{
+    margin-top: 7px;
+    background: white;
+    height: 15px;
+    width: 50%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: all .5s ease;
+    box-shadow:  inset 2px 2px 5px rgba(140, 115, 16, 0.857);
+    animation: mouthNow 2s ease infinite;
+
+}
+@keyframes mouthNow {
+    0%{
+        height: 16px;
+    }
+    50%{
+        height: 13px;
+    }
+    100%{
+        height: 16px;
+    }
+    
+}
+
+
+@keyframes smily {
+    0% {
+        transform: scale(1);
+        transform-origin: center;
+      }
+      5% {
+        transform:  scale(1.05);
+        transform-origin: center;
+      }
+      10% {
+        transform: scale(1);
+        transform-origin: center;
+      }
+      15% {
+        transform: scale(1.1);
+        transform-origin: center;
+      }
+      50% {
+        transform:  scale(1);
+        transform-origin: center;
+      }
+      100% {
+        transform: scale(1);
+        transform-origin: center;
+      }
+    
 }
 
 
@@ -180,11 +320,16 @@ main {
 /* header section start */
 
 .navigation {
-    background: #000000bc;
-    position: sticky;
+    background: #00000040;
+    position: fixed;
+    min-height: 80px;
+    width: 100%;
     top: 0;
-    backdrop-filter: blur(20px);
-    z-index: 2;
+    backdrop-filter: blur(20px)saturate(5)brightness(1);
+    z-index: 99;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 45%);
+    
+    
 
 }
 .navbar{
@@ -261,7 +406,9 @@ main {
 
 /* header section end */
 
+.banner-section{margin-top: 80px;
 
+}
 .main-container .landing-main {
     padding-top: 180px;
     padding-bottom: 230px;
