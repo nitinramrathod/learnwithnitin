@@ -38,7 +38,6 @@ function eyeball(){
 
 
 
-
 function getAllCourses(container, filename,) {
     let http = new XMLHttpRequest();
     http.open('get', `${filename}`, true);
