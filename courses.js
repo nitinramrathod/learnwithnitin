@@ -4,13 +4,13 @@ var javascript = document.getElementById('javascript-courses');
 var javascriptFile = 'courses/javascript.json';
 
 var html = document.getElementById('html-courses');
-var htmlFile = 'courses/javascript.json';
+var htmlFile = 'courses/html.json';
 
 var css = document.getElementById('css-courses');
-var cssFile = 'courses/javascript.json';
+var cssFile = 'courses/css.json';
 
 var jquery = document.getElementById('jquery-courses');
-var jqueryFile = 'courses/javascript.json';
+var jqueryFile = 'courses/jquery.json';
 
 let cursor = document.getElementById('pointer');
 
