@@ -1,7 +1,7 @@
-
 /* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@1,300&family=Rubik+Distressed&family=Secular+One&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Josefin+Sans:ital,wght@1,300&family=Rubik+Distressed&family=Secular+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -25,13 +25,11 @@ body {
 
 main {
     overflow: hidden;
-    
+
 }
 
-#pointer{
-    /* pointer-events: none; */
+#pointer {
     position: fixed;
-    /* transform: translate(-50%, -50%); */
     z-index: 999;
     left: 10px;
     top: 85px;
@@ -41,7 +39,167 @@ main {
 
 }
 
-.face{
+/* user profile start */
+.user-profile-container{
+    position: fixed;
+    z-index: 999;
+    background: rgba(248, 248, 248, 0.053);
+    backdrop-filter: blur(10px)brightness(1.2);
+    padding: 10px;
+    top: 85px;
+    right: 5px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.235);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.user-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+
+}
+#profile-edit-btn{
+    left: -5px;
+    top: -5px;
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;    
+}
+#profile-edit-btn i{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(57, 218, 164);
+}
+.user-profile-container .img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* background: red; */
+    overflow: hidden;
+    padding: 5px;
+    border: 3px solid rgba(114, 234, 178, 0.749);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.575);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.user-profile-container .img img{
+    object-fit: contain;
+    object-position: center;
+    height: auto;
+    width: 120%;
+}
+
+.user-profile-container .name{
+    margin: 0;
+    color: whitesmoke;
+    text-shadow: 1px 1px black;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+
+/* user profile end */
+/* edit profile form start  */
+.edit-profile-form{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 
+    position: fixed;
+    z-index: 999;
+}
+.edit-box{
+    position: relative;
+    z-index: 999;
+    background: red;
+    padding: 20px;
+    padding-top: 40px;
+    background: rgba(255, 255, 255, 0.205);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px)saturate(5);
+    border: 1px solid rgba(255, 255, 255, 0.176);
+}
+.edit-box label{
+    color: white;
+    font-size: 16px;
+    margin-right: 130px;
+}
+.edit-box input[type='text']{
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background: none;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+.edit-box input[type='text']::placeholder{
+    color: rgba(255, 255, 255, 0.519);
+}
+.edit-box button{
+    height: 40px;
+    width: 100px;
+    border: none;
+    outline: none;
+    background: rgba(100, 196, 124, 0.468);
+    color: white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    transition: .5s;
+
+    border-radius: 50px;
+}
+.edit-box button:hover{
+    background: rgb(100, 196, 124);
+
+
+}
+#profile-form-close{
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+#profile-form-close i{
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#profile-form-close:hover i{
+    transform: rotate(90deg);
+}
+#display-username{
+    text-transform: capitalize;
+}
+
+
+.edit-profile-form::after{
+    position: absolute;
+    top: -100%;
+    left: -200%;
+    content: '';
+    width: 500%;
+    height: 400%;
+    background: linear-gradient( rgba(0, 0, 0, 0.385), rgb(0, 0, 0));
+    z-index: -3;
+}
+/* edit profile form end */
+
+
+
+.face {
     width: 70px;
     height: 70px;
     background: yellow;
@@ -53,7 +211,7 @@ main {
     transition: all .5s ease;
 }
 
-.face:hover .mouth{
+.face:hover .mouth {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-radius: 3px;
@@ -61,39 +219,42 @@ main {
     animation: mouth 3s ease infinite;
 
 }
+
 @keyframes mouth {
-    0%{
+    0% {
         border-radius: 0;
         border-top-right-radius: 100px;
         border-top-left-radius: 100px;
         height: 5px;
     }
-    50%{
+
+    50% {
         border-radius: 0;
         border-top-right-radius: 100px;
         border-top-left-radius: 100px;
         height: 12px;
     }
-    100%{
+
+    100% {
         border-radius: 0;
-       border-top-right-radius: 100px;
+        border-top-right-radius: 100px;
         border-top-left-radius: 100px;
         height: 5px;
     }
-    
+
 }
 
 
 
 
-.face:hover{
+.face:hover {
 
     background: rgb(240, 45, 45);
     background: linear-gradient(rgb(255, 66, 66), rgb(143, 10, 10));
 
 }
 
-.eyes{
+.eyes {
     margin-top: 16px;
     width: 100%;
     height: 20px;
@@ -101,28 +262,31 @@ main {
     justify-content: center;
     gap: 5px;
 }
-.eye{
+
+.eye {
     height: 20px;
     width: 20px;
     border-radius: 50%;
     background: white;
     position: relative;
-  
+
 
 
 }
-.eye::before{
+
+.eye::before {
     content: '';
     position: absolute;
     height: 7px;
     width: 7px;
     background: rgb(26, 26, 26);
     border-radius: 50%;
-    
+
     margin: 4px;
 
 }
-.mouth{
+
+.mouth {
     margin-top: 7px;
     background: white;
     height: 15px;
@@ -130,21 +294,24 @@ main {
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     transition: all .5s ease;
-    box-shadow:  inset 2px 2px 5px rgba(140, 115, 16, 0.857);
+    box-shadow: inset 2px 2px 5px rgba(140, 115, 16, 0.857);
     animation: mouthNow 2s ease infinite;
 
 }
+
 @keyframes mouthNow {
-    0%{
+    0% {
         height: 16px;
     }
-    50%{
+
+    50% {
         height: 13px;
     }
-    100%{
+
+    100% {
         height: 16px;
     }
-    
+
 }
 
 
@@ -152,28 +319,33 @@ main {
     0% {
         transform: scale(1);
         transform-origin: center;
-      }
-      5% {
-        transform:  scale(1.05);
+    }
+
+    5% {
+        transform: scale(1.05);
         transform-origin: center;
-      }
-      10% {
+    }
+
+    10% {
         transform: scale(1);
         transform-origin: center;
-      }
-      15% {
+    }
+
+    15% {
         transform: scale(1.1);
         transform-origin: center;
-      }
-      50% {
-        transform:  scale(1);
-        transform-origin: center;
-      }
-      100% {
+    }
+
+    50% {
         transform: scale(1);
         transform-origin: center;
-      }
-    
+    }
+
+    100% {
+        transform: scale(1);
+        transform-origin: center;
+    }
+
 }
 
 
@@ -328,23 +500,26 @@ main {
     backdrop-filter: blur(20px)saturate(5)brightness(1);
     z-index: 99;
     box-shadow: 0 2px 5px rgb(0 0 0 / 45%);
-    
-    
+
+
 
 }
-.navbar{
+
+.navbar {
     min-height: 80px;
 }
-.navbar  .nav-link:hover{
+
+.navbar .nav-link:hover {
     color: #19A9B2 !important;
 }
-.dropdown-toggle::after{
+
+.dropdown-toggle::after {
     border: 0;
 }
 
 .navbar .nav-link {
     text-decoration: none;
-    font-weight:600;
+    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF !important;
@@ -406,9 +581,11 @@ main {
 
 /* header section end */
 
-.banner-section{margin-top: 80px;
+.banner-section {
+    margin-top: 80px;
 
 }
+
 .main-container .landing-main {
     padding-top: 180px;
     padding-bottom: 230px;
@@ -671,7 +848,7 @@ main {
 /* slider section end  */
 
 /* todo list start here  */
-.todo-box{
+.todo-box {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -681,7 +858,8 @@ main {
     box-shadow: 2px 2px 10px black;
 
 }
-#input-task{
+
+#input-task {
     padding: 10px;
     padding-left: 20px;
     outline: none;
@@ -690,74 +868,84 @@ main {
     border-radius: 50px;
     width: 80%;
 }
-.task-btn{
+
+.task-btn {
     outline: none;
-    border: none; 
+    border: none;
     background: none;
     margin: 0 10px;
-    height: 34px;  
-    
+    height: 34px;
+
 
 }
 
-.task-btn i{
-    font-size: 30px; 
-    transition: all .5s ease;   
+.task-btn i {
+    font-size: 30px;
+    transition: all .5s ease;
 }
-#add-task i{
+
+#add-task i {
     color: #3bf4a4;
     margin-top: 7px;
-    
+
 }
-#add-task i:hover{
+
+#add-task i:hover {
     color: rgb(93, 199, 93);
     scale: 1.03;
-    
+
 }
-#save-task i{
+
+#save-task i {
     color: #a8def6;
     margin-top: 7px;
-    
+
 }
-#save-task i:hover{
+
+#save-task i:hover {
     color: #2ebdff;
     scale: 1.03;
-    
+
 }
-#delete-all i{
+
+#delete-all i {
     margin-top: 7px;
     color: rgb(243 92 52);
-    
+
 }
-#delete-all i:hover{
+
+#delete-all i:hover {
     color: rgb(204, 35, 35);
     scale: 1.03;
 }
 
 
 /* show task here  */
-.show-task{
+.show-task {
     gap: 10px;
     background: rgba(228, 228, 228, 0.641);
     margin-bottom: 5px;
     border-radius: 5px;
     padding: 5px;
     transition: all .5s ease;
-    
+
 }
-.show-task:hover{
+
+.show-task:hover {
 
     background: rgba(228, 228, 228, 0.933);
     scale: 1.02;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
-.show-task p{
+
+.show-task p {
     flex: 7;
     color: rgb(47, 47, 47);
     font-size: 18px;
     text-shadow: 0 0 2px rgba(0, 0, 255, 0.074);
 }
-.show-task span{
+
+.show-task span {
     flex: 1;
     font-weight: 600;
     color: rgb(11, 121, 199);
@@ -765,9 +953,10 @@ main {
     position: relative;
     z-index: 4;
     padding-left: 10px;
-   
+
 }
-.show-task span::before{
+
+.show-task span::before {
     z-index: 1;
     content: '';
     position: absolute;
@@ -780,24 +969,27 @@ main {
     background-color: rgba(0, 0, 0, 0.279);
 
 }
-.show-task button{
+
+.show-task button {
     flex: 1;
     transition: all .3s ease;
 }
-.show-task .update{
+
+.show-task .update {
     color: rgb(227, 37, 227);
 }
-.show-task .update:hover{
+
+.show-task .update:hover {
     color: rgb(132, 43, 196);
 }
 
-.show-task .delete{
+.show-task .delete {
     color: rgb(243 92 52);
-    
+
 }
-.show-task .delete:hover{
+
+.show-task .delete:hover {
     color: rgb(204, 35, 35)
-    
 }
 
 
@@ -805,14 +997,15 @@ main {
 /* todo list ends here  */
 
 /* parallax effect start */
-.glass-background{
+.glass-background {
     perspective: 10px;
     overflow-y: auto;
     overflow-x: hidden;
 }
-.parallax-section{
+
+.parallax-section {
     height: 100vh;
-    width: 100%;  
+    width: 100%;
     background: url('/images/parallax/back2.webp');
     background-repeat: no-repeat;
     background-size: cover;
@@ -822,32 +1015,35 @@ main {
     place-content: center;
 }
 
-.parallax-two{
+.parallax-two {
     background: url('/images/parallax/back1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
-.parallax-three{
+
+.parallax-three {
     background: url('/images/parallax/back3.png');
 }
 
-.parallax-section div{
+.parallax-section div {
     padding: 20px;
     text-align: center;
 
 }
-.parallax-section .welcome-heading{
+
+.parallax-section .welcome-heading {
     font-size: 45px;
     font-weight: 800;
     color: transparent;
     -webkit-text-stroke: 1px rgb(0, 55, 119);
     padding-bottom: 20px;
     color: rgb(255, 255, 255);
-   
+
 }
-.parallax-section .welcome-text{
+
+.parallax-section .welcome-text {
     font-size: 18px;
     font-weight: 700;
     color: rgb(0, 0, 0);
@@ -857,22 +1053,49 @@ main {
 }
 
 /* animation parallax start */
-.parallax-anim1{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-00.webp');}
-.parallax-anim2{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-01.webp');}
-.parallax-anim3{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-02.webp');}
-.parallax-anim4{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-03.webp');}
-.parallax-anim5{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-04.webp');}
-.parallax-anim6{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-05.webp');}
-.parallax-anim7{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-06.webp');}
-.parallax-anim8{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-07.webp');}
-.parallax-anim9{ background: url('/images/animation/artur-zima-artur-zima-lighting-sot-08.webp');}
+.parallax-anim1 {
+    background: url('/images/animation/artur-zima-artur-zima-lighting-sot-00.webp');
+}
 
-.parallax-section{
+.parallax-anim2 {
+    background: url('/images/animation/artur-zima-artur-zima-lighting-sot-01.webp');
+}
+
+.parallax-anim3 {
+    background: url('/images/animation/artur-zima-artur-zima-lighting-sot-02.webp');
+}
+
+.parallax-anim4 {
+    background: url('/images/animation/artur-zima-artur-zima-lighting-sot-03.webp');
+}
+
+.parallax-anim5 {
+    background: url('/images/animation/artur-zima-artur-zima-lighting-sot-04.webp');
+}
+
+.parallax-anim6 {
+    background: url('/images/animation/artur-zima-artur-zima-lighting-sot-05.webp');
+}
+
+.parallax-anim7 {
+    background: url('/images/animation/artur-zima-artur-zima-lighting-sot-06.webp');
+}
+
+.parallax-anim8 {
+    background: url('/images/animation/artur-zima-artur-zima-lighting-sot-07.webp');
+}
+
+.parallax-anim9 {
+    background: url('/images/animation/artur-zima-artur-zima-lighting-sot-08.webp');
+}
+
+.parallax-section {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
+
 /* animation parallax start */
 
 
@@ -883,9 +1106,10 @@ main {
 
 
 /* member section start  */
-.members{
+.members {
     padding-bottom: 30px;
 }
+
 .memeber-photo-col {
     min-height: 400px;
     width: 100%;
@@ -1017,14 +1241,14 @@ main {
     position: relative;
 }
 
-.member-info-box  p {
+.member-info-box p {
     color: rgb(183, 183, 183);
     font-size: 20px;
     font-family: 'Caveat', cursive;
 
 }
 
-.member-info-box  h2 {
+.member-info-box h2 {
     color: rgb(255, 255, 255);
     padding-bottom: 10px;
     font-size: 30px;
@@ -1097,19 +1321,21 @@ body::-webkit-scrollbar-thumb {
 
 /* scroll end */
 /* latest section start  */
-.latest{
+.latest {
     min-height: 500px;
     width: 100%;
     background: rgba(255, 255, 255, 0.245);
     padding-bottom: 50px;
 }
-.latest-content{
+
+.latest-content {
     margin: 20px;
     height: 500px;
     background-color: rgb(242, 242, 242);
     overflow-y: scroll;
     border-radius: 10px;
 }
+
 .latest-content::-webkit-scrollbar {
     width: 5px;
     background-color: rgba(0, 0, 0, 0.068);
@@ -1204,41 +1430,46 @@ body::-webkit-scrollbar-thumb {
     background: rgb(25, 96, 103);
     cursor: pointer;
 }
+
 /* scroll bar  */
 
-.video-list .lists{
+.video-list .lists {
     text-align: left;
     display: flex;
     justify-content: left;
     padding: 10px 15px;
     border-bottom: 2px solid rgba(23, 73, 68, 0.655);
-    
-    
+
+
     align-items: center;
-    
+
 }
-.lists img{
+
+.lists img {
     padding-right: 10px;
     cursor: pointer;
     transition: all .5s ease;
 
 }
-.lists p{
+
+.lists p {
     color: white;
     transition: all .5s ease;
 }
-.lists:hover img{
+
+.lists:hover img {
     scale: 1.05;
 
 }
-.lists:hover p{
+
+.lists:hover p {
     color: #45DDE7;
 
 
 }
 
 /* other course screen start  */
-.other-course-box{
+.other-course-box {
     margin: 50px 0;
     width: 100%;
     backdrop-filter: blur(100px)brightness(50)saturate(50);
@@ -1247,25 +1478,28 @@ body::-webkit-scrollbar-thumb {
     border-radius: 15px;
     overflow: hidden;
     transition: all .5s ease;
-    
+
 }
-.other-course-box:hover{
+
+.other-course-box:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.683);
     scale: 1.02;
 }
 
-.other-video-secreen{
+.other-video-secreen {
     width: 100%;
-    
-    
+
+
 }
-.other-course-box .other-video-secreen iframe{
+
+.other-course-box .other-video-secreen iframe {
     width: 100%;
     height: 250px;
 
 
 }
-.other-course-headline{
+
+.other-course-headline {
     padding: 10px 20px;
     font-size: 18px;
     color: white;
@@ -1302,7 +1536,8 @@ footer p {
     font-size: 30px;
     color: rgb(63, 213, 123);
 }
-.teacherBox{
+
+.teacherBox {
     width: 100%;
     min-height: 150px;
     display: flex;
@@ -1315,21 +1550,23 @@ footer p {
     margin-bottom: 20px;
     transition: all .4s ease;
 }
-.teacherBox h3{
+
+.teacherBox h3 {
     color: white;
     text-align: left;
     padding-top: 0;
     font-size: 24px;
-    
+
 }
-.teacherBox p{
+
+.teacherBox p {
     text-align: left;
     color: white;
     font-size: 15px;
 
 }
 
-.teacherImg{
+.teacherImg {
     height: 100px;
     width: 100px;
     overflow: hidden;
@@ -1339,30 +1576,34 @@ footer p {
 
 }
 
-.teacherImg img{
+.teacherImg img {
     object-fit: cover;
     height: 100%;
     width: 100%;
     transition: all .4s ease;
 
 }
-.teacherBox:hover img{
+
+.teacherBox:hover img {
     scale: 1.1;
 }
-.teacherBox:hover{
+
+.teacherBox:hover {
     box-shadow: 5px 5px 0 rgba(8, 60, 95, 0.511);
 }
-.teacherInfo{
+
+.teacherInfo {
     height: 100%;
     padding-left: 10px;
 }
 
 /* map section start  */
-.developerInfo h3{
+.developerInfo h3 {
     padding: 0;
     text-align: left;
 }
-.map{
+
+.map {
     height: 300px;
     overflow: hidden;
     border-radius: 10px;
@@ -1376,24 +1617,25 @@ footer p {
 
 
 /* ======================== */
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
 
     /* home section  */
-    .main-container .landing-text h1{
+    .main-container .landing-text h1 {
         font-size: 80px;
     }
-    .main-container .landing-text h2{
+
+    .main-container .landing-text h2 {
         font-size: 40px;
         padding-bottom: 0;
     }
 
     /* testimonial section  */
-    .testimonial-section{
+    .testimonial-section {
         padding-top: 50px;
     }
 
     /* heading section  */
-    .heading{
+    .heading {
         font-size: 45px;
         padding-top: 50px;
         margin-bottom: 50px;
@@ -1401,7 +1643,7 @@ footer p {
 
     }
 
-    .video-secreen{
+    .video-secreen {
         min-height: 500px;
         padding: 15px;
         border-radius: 10px;
@@ -1410,32 +1652,32 @@ footer p {
 
     }
 
-    .video-list{
+    .video-list {
         overflow-y: scroll;
         min-height: 500px;
         max-height: 500px;
         height: auto;
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.153);
-        
+
 
     }
+
     .video-secreen {
         box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.753);
 
     }
-    
+
     .video-secreen iframe {
         box-shadow: none;
         border-radius: 10px;
-       
+
     }
-    .other-course-box{
+
+    .other-course-box {
         width: 50%;
 
     }
 
-    
+
 }
-
-

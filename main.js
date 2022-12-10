@@ -20,16 +20,16 @@ let cursor = document.getElementById('pointer');
 
 document.querySelector('body').addEventListener('mousemove', eyeball);
 // making function here 
-function eyeball(){
+function eyeball() {
     var eye = document.querySelectorAll('.eye');
 
-    eye.forEach(function(eye){
-        let x = (eye.getBoundingClientRect().left)+ (eye.clientWidth/2);
-        let y = (eye.getBoundingClientRect().top)+ (eye.clientHeight/2);
+    eye.forEach(function (eye) {
+        let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+        let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
 
-        let radian = Math.atan2(event.pageX -x, event.pageY- y);
-        let rot = (radian * (180/Math.PI) * -1)+ 230;
-        eye.style.transform = "rotate("+rot+"deg)";
+        let radian = Math.atan2(event.pageX - x, event.pageY - y);
+        let rot = (radian * (180 / Math.PI) * -1) + 230;
+        eye.style.transform = "rotate(" + rot + "deg)";
     })
 }
 
@@ -146,35 +146,52 @@ deleteAll.addEventListener("click", function () {
 });
 
 
+// profile edit functionality here 
+var profileEditButton = document.getElementById('profile-edit-btn');
+var profileEditFormCloseButton = document.getElementById('profile-form-close');
+var saveProfileButton = document.getElementById('submit-edit');
+var profileEditForm = document.getElementById('edit-profile-form');
+var profilePicture = document.querySelector('#select-image');
+var currentProfileImage = document.querySelector('#profile-img');
+var userName = document.querySelector('#set-username');
+var desplayUserName = document.querySelector('#display-username');
 
-// all courses script here API json fetching. 
-// alert("hllo");
+profileEditButton.addEventListener('click', function () {
+    profileEditForm.classList.remove("d-none");
+})
+profileEditFormCloseButton.addEventListener('click', function () {
+    profileEditForm.classList.add("d-none");
+})
 
-// var javascript = document.getElementById('javascript-courses"');
-// let http = new XMLHttpRequest();
-// http.open('get', 'javascript.json', true);
-// http.send();
+// adding user image in local storage 
+profilePicture.addEventListener('change', function () {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+        localStorage.setItem('profile-image', reader.result);
+    });
+    reader.readAsDataURL(this.files[0]);
+})
 
-
-// http.onload = function () {
-
-//     if (this.readyState == 4 && this.status == 200) {
-
-//         let courseData = JSON.parse(this.responseText);
-//         let output = '';
-
-//         for (let item of courseData) {
-//             output += `                    
-//                                 <div>
-//                                     <h1>${item.iframe}</h1>
-//                                     <h3>${item.title}</h3>
-                                    
-//                                 </div>                  
-//                                 `;
-//         }
-
-//         javascript.innerHTML = output;
+// adding name of user in local storage 
+saveProfileButton.addEventListener('click', () => {
+    localStorage.setItem('username', JSON.stringify(userName.value)); 
+    location.reload();
+})
 
 
-//     }
-// }
+
+
+// retriving that stored image and username 
+document.addEventListener('DOMContentLoaded', () => {
+    const currentProfileImageUrl = localStorage.getItem('profile-image');
+    const currentProfileName = localStorage.getItem('username');
+
+    if (currentProfileImageUrl) {
+        currentProfileImage.setAttribute('src', currentProfileImageUrl);
+    }
+    if (currentProfileName) {
+        desplayUserName.innerHTML = JSON.parse(currentProfileName);;
+    }
+})
+
+
