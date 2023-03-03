@@ -209,7 +209,7 @@ $(document).ready(function () {
     if(cookiesObject){
         if (!(cookiesObject.authenticated == 'true')) {
 
-            newUrl = (url+ '/login-page.html');
+            newUrl = (url+ 'login-page.html');
             window.history.replaceState({}, document.title, newUrl);
             location.reload();
     
