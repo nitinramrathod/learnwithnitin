@@ -47,16 +47,11 @@ $(document).ready(function(){
         if (userInformation) {
             savedUsername = userInformationArray[1].value;
             savedPassword = userInformationArray[3].value;
-            if((loginUsername == savedUsername) && (loginPassword == savedPassword) ){   
-                               
+            if((loginUsername == savedUsername) && (loginPassword == savedPassword) ){                                 
                 
-                document.cookie= "authenticated = true; max-age=172800";
-
-               
-
-                // var expiryTime = new Date().getTime() + (10 * 1000);
-                // sessionStorage.setItem('authenticated', JSON.stringify({value: 'true', expiry: expiryTime}));
+                document.cookie= "authenticated = true; max-age=172800";           
                 location.reload();  
+
             }else{
                 $('.error').text('Incorrect Password or Username')           
             }
@@ -79,7 +74,7 @@ $(document).ready(function(){
     if(cookiesObject){
 
         if (cookiesObject.authenticated == 'true') {
-            newUrl = url.replace('/login-page.html', '/index.html'); 
+            newUrl = url.replace('/login-page.html', ''); 
             window.history.replaceState({}, document.title, newUrl);
             location.reload();    
         }
