@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login-page.css">
+</head>
+<body>
+    <form action="" id="login-form">
+        <h2 class="heading">Login</h2>
+        <div class="form-input">
+            <label for="username">Username</label>
+            <input name="username" type="text" id="username" placeholder="Username">
+        </div>
+        <div class="form-input">
+            <label for="password">Password</label>
+            <input name="password" type="password" id="password" placeholder="Password">
+        </div>
+        <span class="error"></span>
+        <button id="login-btn">Login</button>
+        <p class="create-acc"> or Register now</p>
+    </form>
+    <form action="" id="register-form">
+        <h2 class="heading">Register</h2>
+
+        <div class="form-input">
+            <label for="name">Name</label>
+            <input name="name" type="text" id="name" placeholder="Name">
+        </div>
+        <div class="form-input">
+            <label for="set-username">Username</label>
+            <input name="username" type="text" id="set-username" placeholder="Username">
+        </div>
+        <div class="form-input">
+            <label for="email">Email</label>
+            <input name="email" type="email" id="email" placeholder="Email">
+        </div>
+        <div class="form-input">
+            <label for="set-password">Password</label>
+            <input name="password" type="password" id="set-password" placeholder="Password">
+        </div>
+        <div class="form-input">
+            <label for="set-conf-password">Confirm Password</label>
+            <input name="conf_password" type="password" id="set-conf-password" placeholder="Confirm Password">
+        </div>
+        <button id="register-btn">Register</button>
+        <p class="login-acc"> or Login now</p>
+
+    </form>
+    
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="/login-page.js"></script>
+</body>
+</html>
