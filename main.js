@@ -195,26 +195,26 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
-$(document).ready(function () {
-    var url = window.location.href;
-    var allCookies = document.cookie.split(';');
-    var cookiesObject = allCookies.map(cookie => cookie.split('='))
-            .reduce((accumulator, [key, value])=>
-            ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
-            {});
+// $(document).ready(function () {
+//     var url = window.location.href;
+//     var allCookies = document.cookie.split(';');
+//     var cookiesObject = allCookies.map(cookie => cookie.split('='))
+//             .reduce((accumulator, [key, value])=>
+//             ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
+//             {});
 
 
-    console.log(cookiesObject.authenticated);
+//     console.log(cookiesObject.authenticated);
 
-    if(cookiesObject){
-        if (!(cookiesObject.authenticated == 'true')) {
+//     if(cookiesObject){
+//         if (!(cookiesObject.authenticated == 'true')) {
 
-            newUrl = (url+ 'login-page.html');
-            window.history.replaceState({}, document.title, newUrl);
-            location.reload();
+//             newUrl = (url+ 'login-page.html');
+//             window.history.replaceState({}, document.title, newUrl);
+//             location.reload();
     
-        }
-    }    
-});
+//         }
+//     }    
+// });
 
 
